@@ -8,7 +8,7 @@ VOWEL = "aeiou"
 
 def words(text):
     """Yield (word, start, end). Letters, digits and combining marks all count, because
-    regex \w skips the vowel signs of Bangla and other Indic scripts and would split words."""
+    a regex word match skips the vowel signs of Bangla and other Indic scripts and would split words."""
     i, n = 0, len(text)
     while i < n:
         if unicodedata.category(text[i])[0] not in "LN":
